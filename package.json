@@ -1,0 +1,23 @@
+{
+  "name": "litecard-automation",
+  "version": "1.0.0",
+  "description": "litecard-automation",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anggiagvendo/litecard-automation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/anggiagvendo/litecard-automation/issues"
+  },
+  "homepage": "https://github.com/anggiagvendo/litecard-automation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1"
+  }
+}
