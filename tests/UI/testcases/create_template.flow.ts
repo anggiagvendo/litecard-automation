@@ -1,4 +1,4 @@
-import {CreateTemplate} from '../../src/create_template.page';
+import {CreateTemplate} from '../../../src/create_template.page';
 import { expect, Page } from '@playwright/test';
 
 export async function TestCreateTemplate(page : Page) {

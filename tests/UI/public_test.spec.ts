@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import {LoginPage} from '../src/login.page';
+import {LoginPage} from '../../src/login.page';
 import {TestLogin} from './testcases/login.flow';
 import {TestCreateTemplate} from './testcases/create_template.flow'
 

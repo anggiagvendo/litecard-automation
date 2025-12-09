@@ -1,4 +1,4 @@
-import {LoginPage} from '../../src/login.page.ts';
+import {LoginPage} from '../../../src/login.page.ts';
 import { expect, Page } from '@playwright/test';
 
 export async function TestLogin(page : Page) {

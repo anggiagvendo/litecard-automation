@@ -1,0 +1,18 @@
+# Run test rules can be updated from package.json
+# Run all tests
+npm run test
+
+# Run only UI tests
+npm run test:ui
+
+# Run only API tests
+npm run test:api
+
+# Open the HTML report after a run
+npm run show-report
+
+# Run with custom config
+npx playwright test tests/UI --project=chromium --trace=on
+
+# Run single test file
+npx playwright test tests/UI/public_test.spec.ts --headed --project=chromium --trace=on
