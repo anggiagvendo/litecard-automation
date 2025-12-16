@@ -1,0 +1,68 @@
+name: API Tests
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'tests/API/**'
+      - '.github/workflows/api-tests.yml'
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to run tests (dev or demo)'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - demo
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Load environment file
+        run: |
+          ENV=${{ github.event.inputs.environment }}
+          ENV=${ENV:-dev}
+          ENV_FILE=env/$ENV.env
+          echo "Loading environment file: $ENV_FILE"
+          if [ -f "$ENV_FILE" ]; then
+            grep -v '^\s*#' "$ENV_FILE" | sed '/^\s*$/d' | while IFS= read -r line; do
+              key=$(echo "$line" | cut -d'=' -f1)
+              val=$(echo "$line" | cut -d'=' -f2- | sed 's/^"//' | sed 's/"$//')
+              echo "$key=$val" >> $GITHUB_ENV
+            done
+          else
+            echo "Env file $ENV_FILE not found" >&2
+            exit 1
+          fi
+        shell: bash
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run API tests
+        run: npx playwright test tests/API --project=chromium
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: api-playwright-report
+          path: playwright-report/
+          retention-days: 30

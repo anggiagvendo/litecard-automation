@@ -1,0 +1,10 @@
+[
+  {
+    "cardId": "card_12345",
+    "email": "user1@example.com"
+  },
+  {
+    "cardId": "card_67890",
+    "email": "user2@example.com"
+  }
+]

@@ -1,7 +1,7 @@
 {
-  "name": "litecard-automation",
+  "name": "quality-assurance-automation",
   "version": "1.0.0",
-  "description": "litecard-automation",
+  "description": "quality-assurance-automation",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
@@ -11,16 +11,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anggiagvendo/litecard-automation.git"
+    "url": "git+https://github.com/LiteCard/quality-assurance-automation.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/anggiagvendo/litecard-automation/issues"
+    "url": "https://github.com/LiteCard/quality-assurance-automation/issues"
   },
-  "homepage": "https://github.com/anggiagvendo/litecard-automation#readme",
+  "homepage": "https://github.com/LiteCard/quality-assurance-automation#readme",
   "devDependencies": {
     "@playwright/test": "^1.57.0",
     "@types/node": "^24.10.1"

@@ -1,0 +1,121 @@
+{
+    "name": "DEV - From swagger new 1",
+    "description": "Field Used to display push notifications",
+    "businessName": "DEV - From swagger new 1",
+    "appleWalletSettings": {
+        "disableSharing": false,
+        "hideLogoText": true,
+        "passType": "STORE_CARD"
+    },
+    "googleWalletSettings": {
+        "enforceClassFields": false,
+        "header": "DEV - From swagger new 1",
+        "header1": "",
+        "passType": "GENERIC",
+        "securityShimmer": true,
+        "title": "DEV - From swagger new 1"
+    },
+    "colours": {
+        "background": "#ffffff",
+        "foreground": "#4C4C4C",
+        "label": "#000000"
+    },
+    "links": [],
+    "images": {
+        "appleLogoOverride": "https://assets.dev.litecard.io/EHbF6Y4rlB-dNPzmw8Ids%233Bh4sUCq_ZD93CfQPLajn%2FemoGC4V5ekAzEqiceluwf-logo%403x.png",
+        "hero": "https://assets.dev.litecard.io/EHbF6Y4rlB-dNPzmw8Ids%233Bh4sUCq_ZD93CfQPLajn%2FAXKroadH-aTZDCcEHJgYt-logo%403x.png",
+        "icon": "https://assets.dev.litecard.io/EHbF6Y4rlB-dNPzmw8Ids%233Bh4sUCq_ZD93CfQPLajn%2FemoGC4V5ekAzEqiceluwf-logo%403x.png",
+        "logo": "https://assets.dev.litecard.io/EHbF6Y4rlB-dNPzmw8Ids%233Bh4sUCq_ZD93CfQPLajn%2FemoGC4V5ekAzEqiceluwf-logo%403x.png",
+        "strip": "https://assets.dev.litecard.io/EHbF6Y4rlB-dNPzmw8Ids%233Bh4sUCq_ZD93CfQPLajn%2FAXKroadH-aTZDCcEHJgYt-logo%403x.png"
+    },
+    "barcode": {
+        "altText": "Show this code for scanning",
+        "barcodeValue": "${PASS_ID}",
+        "enabled": true,
+        "messageEncoding": "iso-8859-1",
+        "type": "CODE_128"
+    },
+    "dataFields": [
+        {
+            "appleFieldSettings": {
+                "dateStyle": "NOT_USED",
+                "location": "HEADER_FIELD",
+                "position": 0,
+                "timeStyle": "NOT_USED"
+            },
+            "formFieldSettings": {
+                "dataType": "text",
+                "options": [],
+                "placeHolderText": "First Name",
+                "position": 0,
+                "rules": []
+            },
+            "googleFieldSettings": {
+                "cardRow": true,
+                "location": "TEXT_MODULE_DATA",
+                "position": 0
+            },
+            "i18nKey": "common.labels.firstName",
+            "key": "firstName",
+            "label": "First Name",
+            "usage": [
+                "GOOGLE_WALLET",
+                "APPLE_WALLET"
+            ],
+            "userCanEdit": true
+        },
+        {
+            "appleFieldSettings": {
+                "dateStyle": "NOT_USED",
+                "location": "HEADER_FIELD",
+                "position": 1,
+                "timeStyle": "NOT_USED"
+            },
+            "formFieldSettings": {
+                "dataType": "text",
+                "options": [],
+                "placeHolderText": "Email",
+                "position": 1,
+                "rules": [
+                    "email",
+                    "required"
+                ]
+            },
+            "googleFieldSettings": {
+                "cardRow": true,
+                "location": "TEXT_MODULE_DATA",
+                "position": 1
+            },
+            "i18nKey": "common.labels.email",
+            "key": "email",
+            "label": "Email",
+            "usage": [
+                "GOOGLE_WALLET",
+                "APPLE_WALLET"
+            ],
+            "userCanEdit": true
+        },
+        {
+            "appleFieldSettings": {
+                "changeMessage": "%@",
+                "dateStyle": "NOT_USED",
+                "location": "BACK_FIELD",
+                "position": 1,
+                "timeStyle": "NOT_USED"
+            },
+            "defaultValue": "No new notifications",
+            "description": "Field Used to display push notifications",
+            "googleFieldSettings": {
+                "location": "MESSAGES",
+                "position": 0
+            },
+            "key": "notificationKey",
+            "label": "Notifications",
+            "usage": [
+                "APPLE_WALLET",
+                "GOOGLE_WALLET"
+            ],
+            "userCanEdit": false
+        }
+    ]
+}

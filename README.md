@@ -1,2 +1,2 @@
-# litecard-automation
-litecard-automation
+# quality-assurance-automation
+quality-assurance-automation
